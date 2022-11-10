@@ -1,5 +1,5 @@
 try{
-    var x = myframe.document.querySelectorAll('textarea');
+    var x = document.querySelectorAll('textarea');
     var scripts = [ "The teacher is great and understanding", "They have a great understanding of the subject", 
                     "They clear doubts and make sure the students understand the concepts", "They are caring and take clear our doubts",
                     "They ensure that the speed of the lecture is perfect for everyone", "They hold extra classes for revision",
@@ -26,7 +26,7 @@ try{
       x[i].value = "NIL";
     }
 
-    x = myframe.document.querySelectorAll('input[type="radio"]');
+    x = document.querySelectorAll('input[type="radio"]');
     for (i = 1; i < x.length; i++){
       if (x[i].getAttribute('name') == 'check') {
         continue;
