@@ -10,7 +10,6 @@ try{
     x[0].value=scripts[Math.floor(Math.random() * scripts.length)];
 
     x[1].value = "Nothing as such";  // this is the default Weakness
-    x[3].value = "Nothing as such";  // replace with relevant text
 
     scripts = [ "The course is well structured and gives us a great understanding", "It is meant to given a good real world approach",
                 "It is good for real life applications", "We have enough number of tests to make the course thorough",
@@ -18,9 +17,17 @@ try{
                 "The course is designed to ensure that the students are not left behind", "This course held its importance in online sem too"
               ];
 
-    x[2].value=scripts[Math.floor(Math.random() * scripts.length)];
+    if(x.length == 3){                      // For lab courses
+        x[2].value = "No suggestions as such";
+    }
+    else{
+        x[2].value=scripts[Math.floor(Math.random() * scripts.length)];
+    }
 
-    x[4].value = "No suggestions as such";
+    if(x.length > 3){
+        x[3].value = "Nothing as such";  // replace with relevant text
+        x[4].value = "No suggestions as such";
+    }
 
     for (i = 5; i < x.length; i++) {  // extra spaces "NIL"ed
       x[i].value = "NIL";
